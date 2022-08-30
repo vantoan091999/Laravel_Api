@@ -12,4 +12,9 @@ class CustomerRepository extends BaseRepository implements CustomerRepositoryInt
     {
         return Customer::class;
     }    
+
+    public function show()
+    {
+        return Customer::simplePaginate(6);
+    }
 }
